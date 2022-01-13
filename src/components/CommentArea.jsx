@@ -8,7 +8,7 @@ class CommentArea extends Component {
 
     state = {
         comments: [], // comments will go here
-        isLoading: true,
+        isLoading: false,
         isError: false
     }
 
