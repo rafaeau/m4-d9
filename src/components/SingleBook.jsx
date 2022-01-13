@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import CommentArea from './CommentArea'
+/* import CommentArea from './CommentArea' */
 
 class SingleBook extends React.Component {
 
