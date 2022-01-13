@@ -7,9 +7,12 @@ import BookList from './components/BookList'
 import fantasyBooks from './fantasyBooks.json'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Registration from './components/Registration'
+import MyNavbar from './components/MyNavbar'
 
 function App() {
   return (
+    <>
+    <MyNavbar/>
     <Router>
     <div className="App">
       <header className="App-header">
@@ -21,6 +24,7 @@ function App() {
       </header>
     </div>
     </Router>
+    </>
   )
 }
 

@@ -48,15 +48,15 @@ class Registration extends Component {
                 {
                     this.state.completedForm ? (
                         <>
-                        <div>Completed successfully!</div>
+                        <div className="mb-2">Completed successfully! Your info:</div>
                         <p>Name: {this.state.userData.name}</p>
                         <p>Surname: {this.state.userData.surname}</p>
                         <p>Email: {this.state.userData.email}</p>
                         </>
                     ) : (
                         <>
-                            <h1 className="text-white">FORM</h1>
-                            <Form onSubmit={this.handleSubmit}>
+                            <h2 className="text-white">Registration form:</h2>
+                            <Form onSubmit={this.handleSubmit} style={{ minWidth: '350px', textAlign:'left' }}>
                                 <Form.Group>
                                     <Form.Label>Name</Form.Label>
                                     <Form.Control required type="text" placeholder="Enter name" onChange={(e) => this.handleInput('name', e.target.value)} value={this.state.name} />
@@ -81,10 +81,11 @@ class Registration extends Component {
                                     <Form.Label>Confirm password</Form.Label>
                                     <Form.Control required type="password" placeholder="Confirm password" onChange={(e) => this.handleInput('passwordConfirm', e.target.value)} value={this.state.passwordConfirm} />
                                 </Form.Group>
-
+                                <div style={{ textAlign:'right' }}>
                                 <Button variant="success" type="submit" disabled={!this.handleButton()}>
                                     Submit
                                 </Button>
+                                </div>
                             </Form>
                         </>
                     )
